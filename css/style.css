@@ -3,3 +3,134 @@
     font-family: 'Karla', sans-serif;
 */
 
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: #1C1C1C;
+    --primary-color: #4ADF86;
+    --secondary-color: #fff;
+    --para-color: #D5D4D8;
+    --btn-color: #10B981;
+    --pass-color: #55F991;
+    --line-color: #2F3E53;
+    --pass-back-color: #273549;
+    --main-back-color: #1F2937;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background-color);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* =============
+    Typography
+   ============= */
+
+   .main-heading {
+    font-size: 2.5rem;
+    font-family: 'Karla', sans-serif; 
+    color: var(--secondary-color);
+    font-weight: 800;
+    margin: 0;
+    line-height: 1;
+   }
+
+   .main-heading span {
+    color: var(--primary-color);
+   }
+
+   .subtitle {
+    font-size: 1.25rem;
+    color: var(--para-color);
+    margin-top: 0;
+    margin-bottom: 2em;
+   }
+
+   .btn {
+    padding: .5em 1em;
+    background-color: var(--btn-color);
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+   }
+
+   .btn:hover,
+   .btn:focus {
+    color: var(--btn-color);
+    background-color: #fff;
+   }
+
+/* ===============
+   layout
+   =============== */
+
+   .main {
+    max-width: 650px;
+    margin: 2em;
+    background-color: var(--main-back-color);
+    padding: 3.25rem;
+    border-radius: 10px;
+   }
+
+   .line::after {
+    content: "";
+    height: 1px;
+    display: block;
+    margin: 1em 0;
+    background-color: var(--line-color);
+   }
+
+   .passwords {
+    display: grid;
+    grid-template-columns: minmax(1em,1fr) 3fr minmax(1em,1fr);
+    gap: 1em;
+
+   }
+
+   .passwords > * {
+    grid-column: 2/-2;
+   }
+
+   .pass {
+    height: 2.5rem;
+    background-color: var(--pass-back-color);
+    border-radius: 6px;
+    color: var(--pass-color);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+   }
+
+
+   @media (min-width: 500px) {
+    body {
+        text-align: initial;
+    }
+
+    .passwords {
+        grid-template-columns: 1fr 0.5em 1fr;
+    }
+
+
+    .pass1 {
+        grid-column: 1;
+    }
+
+    .pass2 {
+        grid-column: 3;
+    }
+   }
+
+
