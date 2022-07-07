@@ -58,16 +58,19 @@ body {
 
    .btn {
     padding: .5em 1em;
-    background-color: var(--btn-color);
-    color: #fff;
     border: 0;
     border-radius: 5px;
    }
 
-   .btn:hover,
-   .btn:focus {
+   .btn-primary {
+    background-color: var(--btn-color);
+    color: #fff;
+   }
+
+   .btn:hover {
     color: var(--btn-color);
     background-color: #fff;
+    border: 0;
    }
 
 /* ===============
@@ -75,7 +78,7 @@ body {
    =============== */
 
    .main {
-    max-width: 650px;
+    width: 700px;
     margin: 2em;
     background-color: var(--main-back-color);
     padding: 3.25rem;
