@@ -18,11 +18,15 @@
         <h1 class="main-heading">Generate a<br><span>random Password</span></h1>
         <p class="subtitle">Never use an insecure password again</p>
         <button class="btn btn-primary passwordBtn">Generate Password</button>
+        <!-- <div class="passLength">
+            <label for="password-length">Password Length</label>
+            <input data-pass-length type="range" class="pass-range" id="password-length" min="5" max="15" value="15">
+        </div> -->
         <div class="line"></div>
         <div class="passwords">
-            <div data-pass1 class="pass pass1"></div>
-            <div data-pass2 class="pass pass2"></div>
-        </main>
-    </div>
+            <textarea data-pass class="pass pass1" aria-label="First-Password" id="password-one" disabled></textarea>
+            <textarea class="pass pass2" aria-label="Second-Password" id="password-two" disabled></textarea>
+        </div>
+    </main>
 </body>
 </html>
