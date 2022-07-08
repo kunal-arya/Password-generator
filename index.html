@@ -14,19 +14,31 @@
     <title>Password Generator</title>
 </head>
 <body>
-    <main class="main">
-        <h1 class="main-heading">Generate a<br><span>random Password</span></h1>
-        <p class="subtitle">Never use an insecure password again</p>
-        <button class="btn btn-primary passwordBtn">Generate Password</button>
-        <!-- <div class="passLength">
-            <label for="password-length">Password Length</label>
-            <input data-pass-length type="range" class="pass-range" id="password-length" min="5" max="15" value="15">
-        </div> -->
-        <div class="line"></div>
-        <div class="passwords">
-            <textarea data-pass class="pass pass1" aria-label="First-Password" id="password-one" disabled></textarea>
-            <textarea class="pass pass2" aria-label="Second-Password" id="password-two" disabled></textarea>
-        </div>
-    </main>
+    <div class="container">
+        <main class="main">
+            <h1 class="main-heading">Generate a<br><span>random Password</span></h1>
+            <p class="subtitle">Never use an insecure password again</p>
+            <button class="btn btn-primary passwordBtn">Generate Password</button>
+            <div class="toggleBtns">
+                <input type="checkbox" id="numbers">
+                <label for="numbers">Numbers</label>
+                <input id="symbols" type="checkbox">
+                <label for="symbols">Symbols</label>
+            </div>
+            <div class="passLength">
+                <label for="password-length">Password Length</label>
+                <input data-pass-length type="range" class="pass-range" id="password-length" min="5" max="15" value="15">
+            </div>
+            <div class="line"></div>
+            <div class="passwords">
+                <input type="button" class="pass pass1" aria-label="First-Password" id="password-one">
+                <input type="button" class="pass pass2" aria-label="Second-Password" id="password-two">
+            </div>
+        </main>
+    </div>
+    <div data-text-copied class="hideCopied">
+        <p>Password copied!!</p>
+        <p class="copiedExitBtn">&#10005;</p>
+    </div>
 </body>
 </html>

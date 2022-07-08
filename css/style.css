@@ -25,11 +25,16 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     font-size: 1rem;
+    position: relative;
+    height: 100vh;
+    color: var(--secondary-color);
+}
+
+.container {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    text-align: center;
+    flex-direction: column;
 }
 
 /* =============
@@ -86,8 +91,7 @@ body {
     border-radius: 10px;
    }
 
-   .line::after {
-    content: "";
+   .line {
     height: 1px;
     display: block;
     margin: 1em 0;
@@ -116,16 +120,77 @@ body {
     align-items: center;
     padding: 0.75em;
     resize: none;
+    border: 0;
    }
 
    .pass:hover {
     cursor: pointer;
    }
 
+   .passLength {
+    f
+   }
+
    .pass-range {
+    cursor: pointer;
+    position: relative;
+    font-weight: bold;
+   }
+
+   .pass-range::before {
+    content: "5";
+    position: absolute;
+    left: -15px;
+    color: #10B981;
+    display: block;
+   }
+
+   .pass-range::after {
+    content: "15";
+    position: absolute;
+    right: -20px;
+    color: #10B981;
+   }
+
+   .showCopied {
+    display: flex;
+    background-color: var(--secondary-color);
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    width: 200px;
+    height: 3em;
+    margin: 1em auto 0;
+    position: absolute;
+    bottom: 1em;
+   }
+
+   .showCopied > p {
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    color: var(--line-color);
+   }
+
+   .hideCopied {
+    visibility: hidden;
+   }
+
+   .copiedExitBtn {
     cursor: pointer;
    }
 
+   .toggleBtns > * {
+    cursor: pointer;
+   }
+
+   .passLength {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   }
 
    @media (min-width: 500px) {
     body {
@@ -143,6 +208,11 @@ body {
 
     .pass2 {
         grid-column: 3;
+    }
+
+    .passLength {
+        flex-direction: row;
+        justify-content: space-between;
     }
    }
 
