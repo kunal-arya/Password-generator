@@ -28,6 +28,7 @@ body {
     position: relative;
     height: 100vh;
     color: var(--secondary-color);
+    text-align: center;
 }
 
 .container {
@@ -184,12 +185,20 @@ body {
     cursor: pointer;
    }
 
+   .toggleBtns {
+    margin-bottom: 0.5em;
+   }
+
    .passLength {
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+   }
+
+   .passwordBtn {
+    margin-bottom: 0.5em;
    }
 
    @media (min-width: 500px) {
